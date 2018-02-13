@@ -1,6 +1,7 @@
-from mod_python import apache
+import cgitb
+cgitb.enable()
 
-def handler(req):
-    req.content_type = 'text/plain'
-    req.write("Hello, World 2!")
-    return apache.OK
+print "Content-Type: text/plain;charset=utf-8"
+print
+
+print "Hello World!"
